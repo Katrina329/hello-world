@@ -1,0 +1,76 @@
+===== TABLE 0 =====
+R0: 课程名称 | 数据结构 | 实验学时 | 4 学时
+R1: 开课学期 | 2026—2027 学年第一学期 | 实验周次 | 第 2 周（周二）
+R2: 任课教师 | 汪柳萍 | 实验日期 | 2026 年 9 月 15 日
+R3: 实验类型 | 算法 | 评测平台 | OpenJudge
+===== TABLE 1 =====
+R0: 序号 | 题号 | 题目名称 | 要求
+R1: 题目一 | P0010 | 合并有序序列 | 提交至 AC
+R2: 题目二 | P0030 | 约瑟夫问题 | 提交至 AC
+R3: 题目三 | P0050 | 寻找链表交叉点（Python 版） | 提交至 AC
+===== TABLE 2 =====
+R0: 评分项 | 分值 | 评分说明
+R1: OJ 通过情况 | 3 分 | 三道题目每题 AC 得 1 分；未取得 Accepted 的题目该项不得分。
+R2: AC 截图 | 1 分 | 三张截图齐全、清晰，且包含要求的五项信息，得 1 分；缺失或信息不全酌情扣分。
+R3: 算法思路描述 | 3 分 | 每题 1 分。思路表述正确、清楚，包含问题分析、算法选择、正确性说明与复杂度分析四方面。缺项或表述含糊酌情扣分。
+R4: 逐行代码解释 | 2 分 | 三题合计 2 分。要求逐行覆盖、解释准确，指针操作相关的四个要点说明到位。
+R5: 报告规范性 | 1 分 | 按模板填写、章节完整、格式统一、文件命名正确。
+R6: 合计 | 10 分 | —
+===== TABLE 3 =====
+R0: 姓　　名 | 梁皓然 | 学　　号 | 202511581458
+R1: 班　　级 | 信管1班 | 专　　业 | 信管
+R2: 实验日期 | 9/15 | 指导教师 | 汪柳萍
+R3: 实验名称 | 实验二  线性表 | 实验学时 | 4 学时
+===== TABLE 4 =====
+R0: OpenJudge 用户名 | Slowpulse2
+===== TABLE 5 =====
+R0: 
+===== TABLE 6 =====
+R0: 提交时间 | 5 天前 | 评测结果 | Accepted
+R1: 运行时间 | 132 ms | 内存占用 | 44096 kB
+===== TABLE 7 =====
+R0:  1  import sys\n 2  \n 3  \n 4  def main():\n 5      data = sys.stdin.read().split()\n 6      if not data:\n 7          return\n 8      n = int(data[0])\n 9      a = list(map(int, data[1:1 + n]))\n10      b = list(map(int, data[1 + n:1 + 2 * n]))\n11      i = 0\n12      j = 0\n13      result = []\n14      while i < n and j < n:\n15          if a[i] <= b[j]:\n16              result.append(a[i])\n17              i += 1\n18          else:\n19              result.append(b[j])\n20              j += 1\n21      if i < n:\n22          result.extend(a[i:])\n23      if j < n:\n24          result.extend(b[j:])\n25      print(" ".join(map(str, result)))\n26  \n27  \n28  if __name__ == "__main__":\n29      main()
+===== TABLE 8 =====
+R0: 行号 | 对应代码 | 该行的作用及为什么这样写
+R1: 1 | import sys | 导入 sys 模块，以便用 sys.stdin.read 一次性读入全部数据，避免逐行或逐个输入导致超时。
+R2: 4 | def main(): | 定义主函数，把读入、合并、输出逻辑封装在一起，便于组织代码。
+R3: 5—7 | data = sys.stdin.read().split()\nif not data: return | 一次性读入整个标准输入并按空白切分；读不到数据时直接返回，避免空输入访问 data[0] 越界。
+R4: 8—10 | n = int(data[0])\na = list(map(int, data[1:1+n]))\nb = list(map(int, data[1+n:1+2*n])) | 第 0 个数字是 n；用切片分别取出两段长度为 n 的序列并转换为 int 列表。
+R5: 11—13 | i = 0\nj = 0\nresult = [] | 初始化双指针 i、j 分别指向 a、b 的当前元素，result 保存合并结果。
+R6: 14—20 | while i < n and j < n:\n    if a[i] <= b[j]: ...\n    else: ... | 二路归并核心：两段都没取完时比较 a[i] 与 b[j]，把较小者放入 result，并后移对应指针。
+R7: 21—24 | if i < n: result.extend(a[i:])\nif j < n: result.extend(b[j:]) | 某一段先取完后，把另一段剩余的有序部分一次性追加，保证不遗漏且仍保持有序。
+R8: 25—29 | print(" ".join(map(str, result)))\nif __name__ == "__main__": main() | 把整数结果用空格连接后一次输出，避免行尾多余空格；最后调用 main 执行。
+===== TABLE 9 =====
+R0: 
+===== TABLE 10 =====
+R0: 提交时间 | 5 天前 | 评测结果 | Accepted
+R1: 运行时间 | 24 ms | 内存占用 | 3508 kB
+===== TABLE 11 =====
+R0:  1  def josephus(n, m):\n 2      # 返回 n 只猴子、每次数到 m 出圈时最后剩下的猴子编号\n 3      s = 0\n 4      for i in range(2, n + 1):\n 5          s = (s + m) % i\n 6      return s + 1\n 7  \n 8  \n 9  def main():\n10      results = []\n11      while True:\n12          line = input()\n13          if not line.strip():\n14              continue\n15          n, m = map(int, line.split())\n16          if n == 0 and m == 0:\n17              break\n18          results.append(str(josephus(n, m)))\n19      print("\n".join(results))\n20  \n21  \n22  if __name__ == "__main__":\n23      main()
+===== TABLE 12 =====
+R0: 行号 | 对应代码 | 该行的作用及为什么这样写
+R1: 1—2 | def josephus(n, m):\n# 返回 n 只猴子... | 定义约瑟夫递推函数，注释说明该函数返回最后剩下的猴子编号。
+R2: 3 | s = 0 | 设置递推基准：只有 1 个人时，最后剩下的就是 0 号（从 0 开始编号）。
+R3: 4—5 | for i in range(2, n + 1):\n    s = (s + m) % i | 从 2 人递推到 n 人；每增加一人，把上一轮幸存位置加 m 后对当前人数取模。
+R4: 6 | return s + 1 | 把从 0 开始的编号加 1，还原成题目要求的从 1 开始的猴子编号。
+R5: 9—14 | def main():\nresults = []\nwhile True:\n    line = input()\n    if not line.strip(): continue | 主函数循环读取多组数据，results 暂存输出；遇到空行直接跳过，避免解析错误。
+R6: 15—18 | n, m = map(int, line.split())\nif n == 0 and m == 0: break\nresults.append(str(josephus(n, m))) | 解析每行 n、m；遇到 0 0 时结束；否则计算该组猴王编号并保存为字符串。
+R7: 19 | print("\n".join(results)) | 所有结果用换行连接后一次输出，保证每组答案占一行。
+R8: 22—23 | if __name__ == "__main__":\n    main() | 程序入口，调用 main 执行多组测试。
+===== TABLE 13 =====
+R0: 
+===== TABLE 14 =====
+R0: 提交时间 | 刚刚 | 评测结果 | Accepted
+R1: 运行时间 | 366 ms | 内存占用 | 45336 kB
+===== TABLE 15 =====
+R0:  1  class Node:\n 2      def __init__(self, data, next=None):\n 3          self.data, self.next = data, next\n 4  \n 5  \n 6  class LinkList:\n 7      def __init__(self, lst):\n 8          self.head = Node(lst[0])\n 9          p = self.head\n10          for i in lst[1:]:\n11              node = Node(i)\n12              p.next = node\n13              p = p.next\n14  \n15  \n16  def genLinkList():\n17      a = list(map(int, input().split()))\n18      b = list(map(int, input().split()))\n19      n = int(input())\n20      la = LinkList(a)\n21      lb = LinkList(b)\n22      p = la.head\n23      last = None\n24      while p is not None:\n25          last = p\n26          p = p.next\n27      p = lb.head\n28      for i in range(n - 1):\n29          p = p.next\n30      last.next = p\n31      return la, lb\n32  \n33  \n34  a, b = genLinkList()\n35  \n36  \n37  def findJointPoint(a, b):\n38      len_a = 0\n39      p = a.head\n40      while p is not None:\n41          len_a += 1\n42          p = p.next\n43      len_b = 0\n44      p = b.head\n45      while p is not None:\n46          len_b += 1\n47          p = p.next\n48      pa, pb = a.head, b.head\n49      if len_a > len_b:\n50          for _ in range(len_a - len_b):\n51              pa = pa.next\n52      else:\n53          for _ in range(len_b - len_a):\n54              pb = pb.next\n55      while pa is not pb:\n56          pa = pa.next\n57          pb = pb.next\n58      return pa.data\n59  \n60  \n61  print(findJointPoint(a, b))
+===== TABLE 16 =====
+R0: 行号 | 对应代码 | 该行的作用及为什么这样写
+R1: 1—3 | class Node:\n    def __init__(...):\n        self.data, self.next = data, next | 定义链表结点，包含数据域 data 和指针域 next，用于保存数据和指向下一个结点。
+R2: 6—13 | class LinkList:\n    def __init__(self, lst): ... | 根据输入列表建立单链表：先创建头结点，再逐个创建新结点并串接到表尾。
+R3: 16—31 | def genLinkList():\n    ...\n    return la, lb | 读入两个序列和 n，构造链表 la、lb；找到 a 的尾结点并把它的 next 指向 b 的第 n 个结点，形成 Y 形。
+R4: 34 | a, b = genLinkList() | 调用 genLinkList 得到两个已交叉成 Y 字形的链表，并赋给 a、b。
+R5: 37—47 | len_a = 0\np = a.head\n...\nlen_b = 0\np = b.head\n... | 分别遍历 a、b 求链表长度；由于 a 包含共享后缀，通常 len_a 更大。
+R6: 48—54 | pa, pb = a.head, b.head\nif len_a > len_b: ...\nelse: ... | 让较长链表的指针先走长度差，使 pa、pb 到分叉点的剩余距离相同。
+R7: 55—58 | while pa is not pb:\n    pa = pa.next\n    pb = pb.next\nreturn pa.data | 同步后移，直到两个指针指向同一个结点（用 is 比较对象身份），该结点就是分叉点。
+R8: 61 | print(findJointPoint(a, b)) | 题目框架调用 findJointPoint 并打印交点数据，即 b 的第 n 个结点的值。

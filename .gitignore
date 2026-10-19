@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+
+# Sensitive/system files excluded (public repo)
+nahimic-audio-backup-*.reg
+dump.json
+disk1_readonly_scan.json
+usb_reset_report.json
+disk_backup_gpt_readonly.ps1
+disk_recovery_readonly.ps1
+usb_disk_soft_reset.ps1
+cleanup_analysis.ps1
+safe_cleanup.ps1
+find_joint_point.py
+$null

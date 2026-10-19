@@ -1,0 +1,39 @@
+===== codex-clipboard-30a55652-5bf0-473c-9573-29c2d14afc20.png =====
+P0030 ： 约 瑟 夫 问 题 总 时 间 限 制 ： 1000mS 内 存 限 制 ： 65536kB 描 述 约 瑟 夫 问 题 ： 有 n 只 猴 子 ， 按 顺 时 针 方 向 围 成 一 圈 选 大 王 号 从 1 到 n ), 从 第 1 号 开 始 报 数 ， 一 直 数 到 m ， 数 到 m 的 猴 子 退 出 圈 外 ， 剩 下 的 猴 子 再 接 着 从 1 开 始 报 数 。 就 这 样 ， 直 到 圈 内 只 剩 下 一 只 猴 子 时 ， 这 个 猴 子 就 是 猴 王 ， 缤 程 求 输 入 n ， m 后 ， 输 出 最 后 猴 王 的 缤 号 。
+
+===== codex-clipboard-51230f67-00c6-4fee-b22c-ba34c1bc224c.png =====
+Node ： def LinkList ： def def genLinkLis 乜 （ se 工 上 ， 5 e .data, data, 5 e 1 f next-=-None data, （ se 工 上 ， 工 st ） 5 e 工 上 · head 薊 。 de 过 5 乜 [ 0 ] ） P = 5 e 上 f ． h e a d 茫 or i in 工 5 乜 [ 1 ： ] node = Node （ 主 p p.next b p 1ist map （ 主 n 乜 ， xnput list map （ 主 n 乜 ， xnput 上 n 乜 lnput LinkLi st （ a ） LinkLi st la.head 1 a 5 t = None while p 土 S not None ： 工 a 5 乜 = P P = p.next P = lb.head (n-l) P = p.next 1 a 5 t ． n e x t = p re n 1a, 工 genLinkLis t def findJ0intP0int （ a ， b ） def findJ0intP0int （ a ， ） · 0 a ． h e a d P while p is no 乜 None ： 1en a + = 1 P = p.next 1en b = 0 P = b ． h e a d while p is no 乜 None ： pa, if 1en + = 1 P = p.next pb a.head, b ． h e a d 1en a > 1en ： sp1 it sp1 it 1en ） for for range (len a pa.next 1r1
+
+===== codex-clipboard-545dd35d-83f0-47ba-a156-857b5c669207.png =====
+上 皿 por 乜 5y5 def main data 5y5 ． 5 乜 d 主 n read 主 茫 not data ： b 土 n 乜 (data [ 0 ] ） 1 主 s 乜 map (int, 1 主 s 乜 map (int, 0 data [ 1 data [ 1 · sp1it + n ： 1 + 2 result whi1e 主 < n and 〕 if a 0 ] < = b 的 ] ： result · （ a [ 主 ] ） result · append （ [ j ] ） result · result · print （ extend 0 ： ] ） extend 的 ： ] ） .join map(str, ma1n 了 esul 切 ） ）
+
+===== codex-clipboard-555ddf7c-89c7-4380-9391-10c06b838452.png =====
+Node: def LinkList ： def （ se 工 上 ， self.data, data, 5 e 1 f next-=-None data, （ se 工 上 ， 工 st ） def 5 e 工 上 · head Node 乜 [ 0 ] ） P = 5 e 上 f ． h e a d for 主 in 工 5 乜 [ 1 ： ] node = Node （ p genLinkLis 乜 p.next b p 1ist map （ 主 n 乜 ， xnput list map （ 主 n 乜 ， xnput 工 n 乜 lnput LinkLi st (a) LinkLi st la.head 工 a 5 t = None while p 土 S not None ： 工 a 5 乜 = P P = p.next P = lb.head (n-l) P = p.next 工 a 5 t ． n e x t = p re n 1a, 工 genLinkLis t def findJ0intP0int （ a ， b ） 0 a ． h e a d P while p is no 乜 None ： 1en a + = 1 P = p.next 1en b = 0 P = b ． h e a d while p is no 乜 None ： pa, if 1en + = 1 P = p.next pb a.head, b ． h e a d 1en a > 1en ： for .in (]_en sp1 it sp1 it 1en ）
+
+===== codex-clipboard-5fb710ac-a36f-41d4-b062-7579bc1182c2.png =====
+描 述 给 定 两 个 长 度 为 n 的 从 小 到 大 排 好 序 的 整 数 序 列 ， 请 用 O （ n ） 时 间 将 其 合 并 为 一 个 新 的 有 序 序 列 。 输 入 第 1 行 是 整 数 n 第 2 行 是 n 个 整 数 ， 从 小 到 大 排 好 序 。 第 3 行 是 n 个 整 数 ， 从 小 到 大 排 好 序 。 每 行 整 数 不 超 过 100000 个 。 所 有 整 数 非 负 ， 且 不 大 于 200000 输 出 一 行 ， 将 输 入 中 的 两 行 整 数 合 并 为 新 的 从 小 到 大 整 数 序 列 的 结 果
+
+===== codex-clipboard-7d1e5958-3e99-4fd5-aeab-71f5fa1b03cb.png =====
+描 述 两 个 单 链 表 ， 从 某 个 结 点 开 始 ， 后 面 所 有 的 结 点 都 是 两 者 共 享 的 （ 类 似 于 字 母 Y 形 状 ） 。 请 设 计 O （ n ） 算 氵 去 求 两 者 共 享 的 第 一 个 结 点 （ n 是 两 者 中 间 较 长 的 链 表 的 长 度 ） 。 请 填 空 补 齐 寻 找 第 一 个 共 享 结 点 的 findJointPoint 函 数
+
+===== codex-clipboard-80fe7738-058e-43c0-a6be-4ca307534ba6.png =====
+for in range (len pb = pb.next whi1e pa 土 s not pb ： pa = pa.next pb = pb.next return pa.data cint （ 茫 文 ndJo 文 n 乜 Po 文 n 乜 (), b) ） 1en a ）
+
+===== codex-clipboard-9cacb0a9-82dc-4472-9056-4bf70b4f5817.png =====
+数 据 结 构 与 算 法 （ Pyth 。 n 语 言 实 现 ） 教 材 题 集 P0010 ： 合 并 有 序 序 列 Accepted 44096kB 132mS 526 B 5 天 前 Python3
+
+===== codex-clipboard-ba0d76f5-a077-4e1d-8631-57a13158a4c6.png =====
+输 入 第 1 行 ： 不 超 过 100000 个 整 数 ， 是 链 表 a 最 初 的 内 容 第 2 行 ： 不 超 过 100000 个 整 数 ， 是 链 表 b 的 内 容 第 3 行 ： 整 数 no 表 示 程 序 会 将 链 表 a 的 最 后 一 个 结 点 的 next 指 针 指 向 链 表 b 的 第 n 个 结 点 （ 结 点 编 号 从 1 开 始 Ä), 这 样 链 表 a 就 被 延 长 了 ， 和 b 一 起 形 成 了 Y 字 形 状 ， 而 且 链 表 b 的 第 n 个 结 点 就 成 为 Y 字 形 的 分 叉 点 。 输 出 链 表 b 的 第 n 个 结 点 样 例 输 入 1 2 3 4 5 7 8 9 10 11 3 样 例 输 出 9
+
+===== codex-clipboard-c30148a7-5bb5-46c8-b574-6abb70b9bd82.png =====
+描 述 两 个 单 链 表 ， 从 某 个 结 点 开 始 ， 后 面 所 有 的 结 点 都 是 两 者 共 享 的 （ 类 似 于 字 母 Y 形 状 ） 。 请 设 计 O （ n ） 算 氵 去 求 两 者 共 享 的 第 一 个 结 点 （ n 是 两 者 中 间 较 长 的 链 表 的 长 度 ） 。 请 填 空 补 齐 寻 找 第 一 个 共 享 结 点 的 findJointPoint 函 数 不 必 阅 读 genLinkList 函 数 ， 只 要 知 道 它 返 回 两 个 交 叉 成 Y 字 形 的 链 表 a 和 b 即 可 。 c 1 a 5 5 Node: def 主 n 主 乜 (self, self.data, data, next=None) 5 e 1 f ． ne xt = data, c 1 a 5 5 LinkList ： def 主 n 主 乜 (self, 工 st ） self.head = Node （ 工 5 t [ 0 ] ） P = 5 e 上 f ． h e a d f0 过 主 in 工 5 乜 [ 1 ： ] node = Node （ ） p ． next P = p.next de 《 genLinkList 0 .split 0 ） ） .split 0 ） ） b p 工 主 5 t （ map （ 主 n 乜 ， input 0 工 主 5 t （ map （ 主 n 乜 ， input 0 主 n 乜 (input 0 ） LinkList （ a ） LinkList （ ） la.head 工 a 5 t = None while p 工 5 not None ： 工 a 5 乜 = P P 一 p.next P = lb.head f0 过 工 in range (n—l) P 一 p.next 1 a 5 t ． n e x t = return 1a, 工 a,b = genL1nkList 0 de 上 工 ndJo 工 n 乜 Po 工 n 乜 （ a ， b ） / / 在 此 处 补 充 你 的 代 码 p 汇 主 n 乜 （ 上 主 ndJo 主 n 乜 PO 主 n 乜 （ a
+
+===== codex-clipboard-cccbdf21-fb4a-4540-b896-2496a2889e81.png =====
+引 owpu 《 se2 的 主 页 求 真 像 我 加 入 的 小 组 最 近 的 提 交 NOI 《 ． 程 序 设 计 实 习 MOOC 勋 童 用 户 名 性 别 学 校 注 册 时 间 修 改 个 人 信 息 数 据 结 构 与 算 法 slowpulse2 un known 2026 一 09 一 15 14 ： 12 ： 29 比 赛 题 目 结 果 P0050 ： 寻 找 链 表 交 叉 点 Accepted （ Pyth 。 n 语 言 实 现 ） 教 材 (Python 版 〕 题 集 内 存 45336kB 时 间 366mS 代 码 长 度 1069 B 提 交 时 间 Python3 刚 刚
+
+===== codex-clipboard-d3749a31-1a17-45fd-b50b-a0b210714403.png =====
+数 据 结 构 与 算 法 （ Pyth 。 n 语 言 实 现 ） 教 材 题 集 P0030 ： 约 瑟 夫 问 题 Accepted 3508kB 24ms 599 B 5 天 前 Python3
+
+===== codex-clipboard-fc0793d0-c4f2-497f-9f3d-7e84e8c7f83f.png =====
+def 〕 osephus (), m) · 冖 “ 返 回 刀 只 猴 子 、 每 次 数 到 m 出 圈 时 晟 后 剩 下 的 霰 子 绢 号 卫 开 始 丿 。 = 0 # 基 编 号 ： 只 剩 只 时 幸 存 者 下 为 0 re 乜 n 5 + 1 # 莩 回 基 纟 扁 号 def main 工 esu 上 ts while True: 1ine xnput if no 乜 line.strip map(xnt, ． sp1 if n 0 and m break results.append str j osephus (n, print （ \n · j 0 土 n （ 了 esu1 乜 5 ） ） ma1n
+

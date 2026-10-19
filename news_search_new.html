@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
+  html,body { width:1280px; height:1563px; overflow:hidden; }
+  body {
+    font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;
+    background:#EEF2F7;
+    color:#1F2937;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* Header */
+  .header {
+    background:linear-gradient(135deg,#0F766E 0%,#0891B2 55%,#06B6D4 100%);
+    padding:46px 44px 40px;
+    color:#fff;
+    position:relative;
+  }
+  .header::after{
+    content:""; position:absolute; right:-60px; top:-60px; width:260px; height:260px;
+    background:rgba(255,255,255,.08); border-radius:50%;
+  }
+  .topline { display:flex; align-items:center; gap:16px; }
+  .logo-badge{
+    background:#F59E0B; color:#fff; font-weight:700; font-size:34px;
+    padding:6px 18px; border-radius:14px; letter-spacing:1px;
+  }
+  .title { font-size:52px; font-weight:800; letter-spacing:2px; }
+  .subtitle { font-size:26px; opacity:.92; margin-top:14px; }
+  .howto{
+    position:absolute; right:44px; top:52px; font-size:24px;
+    background:rgba(255,255,255,.18); padding:10px 22px; border-radius:22px; cursor:pointer;
+  }
+
+  /* Tabs */
+  .tabs { display:flex; background:#fff; border-bottom:1px solid #E5E7EB; }
+  .tab{
+    flex:1; text-align:center; padding:30px 0; font-size:30px; font-weight:700; color:#6B7280;
+    cursor:pointer; border-bottom:5px solid transparent;
+  }
+  .tab.active{ color:#0F766E; border-bottom-color:#0F766E; }
+
+  /* Main scroll area */
+  .main { flex:1; padding:28px 36px 0; display:flex; flex-direction:column; gap:24px; overflow:hidden; }
+
+  /* Search bar */
+  .searchbar{
+    display:flex; align-items:center; gap:20px; background:#fff;
+    border-radius:18px; padding:22px 26px; box-shadow:0 2px 10px rgba(15,23,42,.06);
+  }
+  .searchbar .hit{ font-size:26px; font-weight:700; color:#0F766E; white-space:nowrap; }
+  .searchbar .hit b{ color:#F59E0B; font-size:30px; }
+  .search-input{
+    flex:1; display:flex; align-items:center; gap:12px; background:#F1F5F9;
+    border-radius:12px; padding:14px 20px;
+  }
+  .search-input .icon{ font-size:24px; color:#64748B; }
+  .search-input span{ font-size:24px; color:#94A3B8; }
+  .strategy{ font-size:22px; color:#6B7280; }
+
+  /* Data center card */
+  .datacenter{
+    background:#fff; border-radius:18px; padding:24px 28px;
+    box-shadow:0 2px 10px rgba(15,23,42,.06);
+  }
+  .dc-head{ display:flex; align-items:center; justify-content:space-between; }
+  .dc-title{ display:flex; align-items:center; gap:12px; font-size:28px; font-weight:800; color:#0F766E; }
+  .dc-desc{ font-size:22px; color:#6B7280; margin-top:12px; line-height:1.6; }
+  .dc-meta{ display:flex; gap:26px; margin-top:16px; flex-wrap:wrap; }
+  .chip{ font-size:22px; color:#334155; background:#F1F5F9; padding:10px 18px; border-radius:10px; }
+  .chip b{ color:#0F766E; }
+
+  /* News list */
+  .listhead{ display:flex; align-items:center; justify-content:space-between; }
+  .listhead h3{ font-size:28px; font-weight:800; color:#1F2937; }
+  .listhead .time{ font-size:22px; color:#64748B; }
+  .news{ display:flex; flex-direction:column; gap:12px; }
+  .card{
+    display:flex; align-items:center; gap:20px; background:#fff; border-radius:14px;
+    padding:18px 24px; box-shadow:0 1px 6px rgba(15,23,42,.05);
+  }
+  .card .cn{
+    flex:none; width:64px; height:64px; border-radius:50%; background:#CCFBF1; color:#0F766E;
+    font-weight:800; font-size:24px; display:flex; align-items:center; justify-content:center;
+  }
+  .card .body{ flex:1; min-width:0; }
+  .card .t{ font-size:26px; font-weight:700; color:#1F2937; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .card .meta{ font-size:20px; color:#6B7280; margin-top:6px; }
+  .card .meta b{ color:#0891B2; font-weight:700; }
+
+  /* Bottom bar */
+  .bottombar{
+    background:#0F172A; color:#fff; padding:26px 36px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .bottombar .left{ font-size:24px; opacity:.9; }
+  .bottombar .actions{ display:flex; gap:18px; }
+  .btn{ font-size:24px; padding:14px 30px; border-radius:12px; font-weight:700; cursor:pointer; }
+  .btn.export{ background:#F59E0B; color:#0F172A; }
+  .btn.del{ background:rgba(255,255,255,.12); color:#fff; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="topline">
+      <span class="logo-badge">CN</span>
+      <span class="title">中国旅游新闻检索</span>
+    </div>
+    <div class="subtitle">基于 World News 的 JavaScript 检索 Demo</div>
+    <div class="howto">如何获取？</div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">新闻检索</div>
+    <div class="tab">数据中心</div>
+  </div>
+
+  <div class="main">
+    <div class="searchbar">
+      <span class="hit">本地命中 <b>9</b> 条</span>
+      <div class="search-input"><span class="icon">🔍</span><span>库内检索（如：国庆、自驾、文旅）</span></div>
+      <span class="strategy">全表扫描 · 命中 9 条</span>
+    </div>
+
+    <div class="datacenter">
+      <div class="dc-head">
+        <span class="dc-title">🗂 数据中心 · 数据库</span>
+        <span class="chip">占用浏览器存储 <b>32.9 KB</b></span>
+      </div>
+      <div class="dc-desc">这里存放的是你从 World News API 采回来的新闻。数据存在浏览器自带的 IndexedDB 里，关闭页面也不会丢失。</div>
+      <div class="dc-meta">
+        <span class="chip">库内记录 <b>9</b></span>
+        <span class="chip">来源国家/地区 <b>CN</b></span>
+        <span class="chip">全部来源国</span>
+      </div>
+    </div>
+
+    <div class="listhead">
+      <h3>新闻列表</h3>
+      <span class="time">最新发布时间 2026·10·09</span>
+    </div>
+
+    <div class="news">
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">国庆假期国内出游8.26亿人次 文旅市场持续火热</div><div class="meta">发布 2026-10-08 · 存入 2026-10-09 08:12 · id=4f8a20</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">海南环岛旅游公路全线通车 串起12市县景点</div><div class="meta">发布 2026-10-07 · 存入 2026-10-09 08:20 · id=7c3d91</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">故宫博物院推出明清宫廷文物特展 10月9日开展</div><div class="meta">发布 2026-10-06 · 存入 2026-10-09 08:27 · id=a1e6b4</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">新疆独库公路秋季自驾游火爆 沿线住宿预订涨三成</div><div class="meta">发布 2026-10-05 · 存入 2026-10-09 08:35 · id=d9f2c7</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">广西桂林遇龙河竹筏漂流迎来秋季客流高峰</div><div class="meta">发布 2026-10-04 · 存入 2026-10-09 08:41 · id=2b7e58</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">文旅部公布新一批国家级夜间文旅消费集聚区</div><div class="meta">发布 2026-10-03 · 存入 2026-10-09 08:50 · id=6c0a33</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">北京环球影城秋冬联票上线 单日最高优惠五折</div><div class="meta">发布 2026-10-02 · 存入 2026-10-09 08:56 · id=8d4f12</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">云南大理洱海生态廊道获评“最美绿道”</div><div class="meta">发布 2026-10-01 · 存入 2026-10-09 09:03 · id=3e9b77</div></div></div>
+      <div class="card"><span class="cn">CN</span><div class="body"><div class="t">上海迪士尼宣布新主题园区扩建计划</div><div class="meta">发布 2026-09-30 · 存入 2026-10-09 09:10 · id=5a1d64</div></div></div>
+    </div>
+  </div>
+
+  <div class="bottombar">
+    <span class="left">共 9 条 · 全部来源国</span>
+    <div class="actions">
+      <span class="btn export">导出 JSON</span>
+      <span class="btn del">删除</span>
+    </div>
+  </div>
+</body>
+</html>

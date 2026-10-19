@@ -1,0 +1,147 @@
+===== codex-clipboard-545dd35d-83f0-47ba-a156-857b5c669207.png =====
+import sys
+def main
+sys . stdin . read
+. split
+if not data:
+data [1:1 + n] ) )
+b
+return
+int (data
+list map (int,
+list map (int,
+data [1
+*
+n]))
+result
+while i < n and j
+if a [i] < b[']:
+result . append (a [i] )
+else :
+result . append (b [j ] )
+if
+result . extend (a C i:] )
+result . extend (b C j : ] )
+print
+. join map(str,
+maln
+name
+result)) )
+
+===== codex-clipboard-fc0793d0-c4f2-497f-9f3d-7e84e8c7f83f.png =====
+def
+josephus (n, m) :
+for i in range
+return s + 1 # 1
+def main
+o:
+results
+while True:
+line
+input
+if not line. strip
+con t inue
+map (in t, line . split
+if n
+0 and m
+o:
+break
+results . append str (josephus (n,
+print ("\n" . join (results) )
+if
+name
+maln
+
+===== codex-clipboard-51230f67-00c6-4fee-b22c-ba34c1bc224c.png =====
+class
+Node :
+self . next
+class
+(self, 1st) •
+ini t
+(self,
+self . data,
+LinkList :
+ini t
+data,
+next=None)
+data,
+next
+self . head
+Node (1st
+p = self. head
+for i in 1st C 1:] :
+node = Node (i
+node
+p . next
+p. next
+p
+def genLinkList
+o:
+o
+o
+. spl it
+. spl it
+b
+1b
+p
+list map (int, input
+list map (int, input
+int input
+LinkList (a)
+LinkList
+(b)
+Ia . head
+last = None
+while p is not None:
+last = P
+p = p. next
+p = 1b. head
+for i in range (n—l) :
+p = p. next
+last. next = p
+return 1 a, 1b
+genLinkList
+def findJointPoint (a, b) :
+def findJointPoint (a, b) :
+len a
+a. head
+while p is not None:
+len a += 1
+p = p. next
+len b = 0
+p = b. head
+while p is not None:
+pa,
+if
+len b += 1
+p = p. next
+pb
+a. head, b. head
+len a > len b:
+for
+xn
+pa
+else :
+for
+xn
+range ( len a
+pa . next
+range ( len b
+len b) :
+len a)
+
+===== codex-clipboard-80fe7738-058e-43c0-a6be-4ca307534ba6.png =====
+pa
+else :
+pa . next
+for
+in range ( len b
+pb = pb.next
+while pa is not pb:
+pa = pa.next
+pb = pb . next
+return pa . data
+tint (findJointPoint (a, b) )
+len a) :
+

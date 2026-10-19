@@ -1,0 +1,146 @@
+===== p0010_code.png =====
+import sys
+def main
+o:
+data
+sys . stdin . read
+if not data:
+split
+n
+i
+return
+int (data [0] )
+list (map ( int,
+list (map ( int,
+data [1:1 + n] ) )
+data [1 + n: 1 + 2
+j
+0
+result
+while i < n and j
+if a [i] <= b [j]:
+result . append (a [i] )
+else :
+result . append
+result . extend (a [i: ] )
+result . extend (b [j : ] )
+result) ) )
+if
+print
+name
+main
+. join map (str,
+main
+
+===== p0030_code.png =====
+def josephus (n, m) :
+n Rjfkö-s m (A 1
+s
+for i in range
+return s + 1 # 1
+def main
+o:
+results
+while True :
+line
+input
+if
+n,
+if
+not line . strip
+continue
+map (int, line . split
+o
+and m —
+break
+results . append (str (josephus (n,
+("\n" . join (results) )
+print
+if
+name
+main
+main
+
+===== p0050_code.png =====
+class Node :
+def
+init (self,
+self . data,
+data, next=None) :
+self . next = data,
+next
+class LinkList:
+def
+init (self, 1st) :
+self. head = Node (1st [0] )
+p = self. head
+for i in 1st [1:] :
+node = Node (i)
+p. next = node
+— p. next
+p
+def genLinkList
+o:
+b
+Ia
+1b
+p
+list (map ( int , input
+list (map ( int , input
+int ( input
+LinkList (a)
+LinkList (b)
+— 1 a. head
+last = None
+while p is not None :
+last = P
+p = p. next
+p = 1b. head
+for i in range (n—l) :
+p = p. next
+last. next = p
+return I a, 1b
+genLinkLis t
+def findJointPoint (a, b) :
+def findJointPoint (a, b) :
+len a —
+p = a. head
+while p is not None :
+len a += 1
+p = p. next
+len b = 0
+p = b. head
+while p is not None :
+len b += 1
+p = p. next
+pa, pb = a. head, b. head
+if len a > len b:
+in
+for
+pa
+else :
+for
+range ( len
+— pa.next
+in
+range ( len
+b
+split
+split
+len b) :
+len a) :
+
+===== p0050_code2.png =====
+pa
+else :
+— pa.next
+for
+in range (len b
+pb = pb . next
+while pa is not pb:
+pa = pa.next
+pb = pb. next
+return pa. data
+rint (findJointPoint (a, b) )
+len a) :
+
